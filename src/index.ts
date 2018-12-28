@@ -1,0 +1,1 @@
+import { PgManager, PgManagerConfig } from 'task-manager-model-ts'

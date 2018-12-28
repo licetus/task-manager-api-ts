@@ -13,6 +13,10 @@
     "test": "NODE_ENV=test _mocha -r ts-node/register ./test/*.spec.ts"
   },
   "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.12.18",
+    "express": "^4.16.4",
+    "task-manager-model-ts": "git+https://git@github.com/licetus/task-manager-model-ts.git",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
