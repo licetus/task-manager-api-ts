@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "types": [
+      "mocha",
+      "chai",
+      "node"
+    ],
+    "lib": [
+      "esnext", 
+      "dom"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

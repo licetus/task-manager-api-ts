@@ -1,0 +1,40 @@
+{
+  "name": "task-manager-api-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "engines": {
+    "node": "10.15.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "build": "ts-node bin/build.ts; tsc --build",
+    "initdb": "ts-node bin/init.ts",
+    "test": "NODE_ENV=test _mocha -r ts-node/register ./test/*.spec.ts"
+  },
+  "dependencies": {
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/lodash": "^4.14.119",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "lodash": "^4.17.11",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/licetus/task-manager-api-ts.git"
+  },
+  "author": "licetus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/licetus/task-manager-api-ts/issues"
+  },
+  "homepage": "https://github.com/licetus/task-manager-api-ts#readme"
+}
