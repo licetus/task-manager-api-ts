@@ -1,6 +1,6 @@
 import { errors } from 'task-manager-model-ts'
 
-const locales = require(`../config/${process.env.NODE_ENV}.json`).locales
+const locales = require(`../config/${process.env.NODE_ENV || 'development'}.json`).locales
 const localization = require(`./locale.${locales}.json`)
 
 errors.update(localization)

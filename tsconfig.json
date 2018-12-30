@@ -14,7 +14,7 @@
     "noImplicitAny": false,
     "sourceMap": true,
     "baseUrl": "./",
-    "outDir": "./dist",
+    "outDir": "./build",
     "types": [
       "mocha",
       "chai",
