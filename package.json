@@ -8,9 +8,10 @@
     "npm": "6.4.1"
   },
   "scripts": {
+    "prestart": "npm install",
+    "start": "npm run build; ts-node --ignore 'node_modules/(?!task-manager-model-ts' src/start.ts",
     "model": "rm -rf node_modules/task-manager-model-ts; npm install",
-    "build": "ts-node bin/build.ts; tsc --build",
-    "initdb": "ts-node bin/init.ts",
+    "build": "swagger-cli bundle src/api/base.yaml --outfile src/swagger.yaml -t yaml",
     "test": "NODE_ENV=test _mocha -r ts-node/register ./test/*.spec.ts"
   },
   "dependencies": {
@@ -41,6 +42,7 @@
     "chai-as-promised": "^7.1.1",
     "lodash": "^4.17.11",
     "mocha": "^5.2.0",
+    "swagger-cli": "^2.2.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.2"
   },
