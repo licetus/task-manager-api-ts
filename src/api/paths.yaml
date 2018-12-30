@@ -1,0 +1,28 @@
+/pet:
+  $ref: "./pet/base.yaml#/paths/~1pet"
+/pet/findByStatus:
+  $ref: "./pet/base.yaml#/paths/~1pet~1findByStatus"
+/pet/findByTags: 
+  $ref: "./pet/base.yaml#/paths/~1pet~1findByTags"
+/pet/{petId}:
+  $ref: "./pet/base.yaml#/paths/~1pet~1{petId}"
+/pet/{petId}/uploadImage:
+  $ref: "./pet/base.yaml#/paths/~1pet~1{petId}~1uploadImage"
+/store/inventory:
+  $ref: "./store/base.yaml#/paths/~1store~1inventory"
+/store/order:
+  $ref: "./store/base.yaml#/paths/~1store~1order"
+/store/order/{orderId}:
+  $ref: "./store/base.yaml#/paths/~1store~1order~1{orderId}"
+/user:
+  $ref: "./user/base.yaml#/paths/~1user"
+/user/createWithArray:
+  $ref: "./user/base.yaml#/paths/~1user~1createWithArray"
+/user/createWithList:
+  $ref: "./user/base.yaml#/paths/~1user~1createWithList"
+/user/login:
+  $ref: "./user/base.yaml#/paths/~1user~1login"
+/user/logout:
+  $ref: "./user/base.yaml#/paths/~1user~1logout"
+/user/{username}:
+  $ref: "./user/base.yaml#/paths/~1user~1{username}"

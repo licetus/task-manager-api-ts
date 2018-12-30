@@ -1,0 +1,55 @@
+{
+  "name": "task manager app service",
+  "swagger": {
+    "host": "192.168.31.240",
+    "schemes": [
+      "http"
+    ]
+  },
+  "server": {
+    "port": 80
+  },
+  "third-party": {},
+  "database": {
+    "postgres": [
+       {
+        "db": "task-manager",
+        "host": "localhost",
+        "port": 5432,
+        "user": "postgres",
+        "password": "postgres",
+        "default": true
+      },
+      {
+        "db": "test-db",
+        "host": "localhost",
+        "port": 5432,
+        "user": "postgres",
+        "password": "postgres"
+      }
+    ]
+  },
+  "jwtOptions": {
+    "expiresIn": "180d"
+  },
+  "secret": {
+    "jwt": "RWxhaW5lLCBJIGxvdmUgeW91fg==",
+    "cookie": "1dy-7C6-a4H-eEa",
+    "hash": "Fc5-vhT-zG5-7vh"
+  },
+  "pay": {
+    "wechat": {
+      "appid": "",
+      "appsecret": "",
+      "partnerid": "",
+      "signkey": "",
+      "redirect": ""
+    },
+    "ali": {
+      "partnerid": "",
+      "appid": "",
+      "sellerid": "",
+      "redirect": ""
+    }
+  }
+}

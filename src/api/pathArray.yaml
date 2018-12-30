@@ -1,0 +1,4 @@
+paths:
+  - $ref: 'pet/base.yaml#/paths'
+  - $ref: 'store/base.yaml#/paths'
+  - $ref: 'user/base.yaml#/paths'
