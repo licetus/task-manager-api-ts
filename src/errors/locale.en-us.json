@@ -1,0 +1,13 @@
+{
+  "NotAuthorize": "Authorization failed",
+  "NotAuthenticate": "Authentication failed",
+  "ApiAuthKeyIsMissing": "Api authentication key is missing",
+  "InvalidVerifyCode": "Invalid verify code",
+  "InvalidMobileNumber": "Pilot accout should be a valid mobile number",
+  "InvalidEmail": "Invalid email",
+  "AccountExist": "This account already exists",
+  "NoFileFound": "No file found in upload request",
+  "SaveFileFailed": "Save file failed",
+  "FileSizeExtendLimit": "Upload file is too large",
+  "SuperAdmin": "Super Admin is can not be modified"
+}

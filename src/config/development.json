@@ -1,5 +1,6 @@
 {
   "name": "task manager app service",
+  "locales": "en-us",
   "swagger": {
     "host": "192.168.31.240",
     "schemes": [

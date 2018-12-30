@@ -1,0 +1,13 @@
+{
+  "NotAuthorize": "登陆验证失败",
+  "NotAuthenticate": "权限不足",
+  "ApiAuthKeyIsMissing": "登陆密钥丢失",
+  "InvalidVerifyCode": "验证码错误",
+  "InvalidMobileNumber": "请提供有效的手机号码",
+  "InvalidEmail": "请提供有效的邮箱地址",
+  "AccountExist": "该账号已存在",
+  "NoFileFound": "上传内容未包含文件",
+  "SaveFileFailed": "保存文件失败",
+  "FileSizeExtendLimit": "上传文件过大",
+  "SuperAdmin": "不能添加删除修改超级管理员权限"
+}

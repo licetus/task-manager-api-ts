@@ -8,6 +8,7 @@
     "npm": "6.4.1"
   },
   "scripts": {
+    "model": "rm -rf node_modules/task-manager-model-ts; npm install",
     "build": "ts-node bin/build.ts; tsc --build",
     "initdb": "ts-node bin/init.ts",
     "test": "NODE_ENV=test _mocha -r ts-node/register ./test/*.spec.ts"
@@ -16,12 +17,16 @@
     "@types/cors": "^2.8.4",
     "@types/express": "^4.16.0",
     "@types/express-fileupload": "^0.4.0",
+    "@types/js-yaml": "^3.11.4",
+    "@types/jsonwebtoken": "^8.3.0",
     "@types/log4js": "^2.3.5",
     "@types/node": "^10.12.18",
     "@types/swagger-tools": "^0.10.6",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-fileupload": "^1.1.1-alpha.1",
+    "js-yaml": "^3.12.0",
+    "jsonwebtoken": "^8.4.0",
     "log4js": "^3.0.6",
     "swagger-tools": "^0.10.4",
     "task-manager-model-ts": "git+https://git@github.com/licetus/task-manager-model-ts.git",
