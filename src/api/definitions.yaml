@@ -1,0 +1,24 @@
+Category:
+  $ref: "pet/base.yaml#/definitions/Category"
+Tag:
+  $ref: "pet/base.yaml#/definitions/Tag"
+Pet:
+  $ref: "pet/base.yaml#/definitions/Pet"
+Order:
+  $ref: "store/base.yaml#/definitions/Order"
+User:
+  $ref: "user/base.yaml#/definitions/User"
+ApiResponse:
+  type: "object"
+  properties:
+    code:
+      type: "integer"
+      format: "int32"
+    type:
+      type: "string"
+    message:
+      type: "string"
+  example:
+    code: 0
+    type: "type"
+    message: "message"
