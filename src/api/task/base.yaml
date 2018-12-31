@@ -11,8 +11,10 @@ paths:
       operationId: "addTask"
       consumes:
       - "application/json"
+      - "application/xml"
       produces:
       - "application/json"
+      - "application/xml"
       parameters:
       - in: "body"
         name: "body"
@@ -23,7 +25,6 @@ paths:
       responses:
         405:
           description: "Invalid input"
-      security:
       x-swagger-router-controller: "Task"
     get:
       tags:
@@ -33,22 +34,43 @@ paths:
       operationId: "getTaskList"
       consumes:
       - "application/json"
+      - "application/xml"
       produces:
       - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "page"
+        in: "query"
+        type: "integer"
+      - name: "pagesize"
+        in: "query"
+        type: "integer"
+      - name: "next"
+        in: "query"
+        type: "integer"
+      - name: "filters"
+        in: "query"
+        type: "string"
+      - name: "orderBy"
+        in: "query"
+        type: "string"
       responses:
         200:
           description: "successful operation"
           schema:
             type: "object"
-            items:
-              total: "number"
+            properties:
+              total:
+                type: "integer"
+                format: "int32"
               items:
                 type: "array"
                 items:
-                  type: "object"
-      security:
+                  $ref: "#/definitions/Task"
+        400:
+          description: "Get task list failed"
       x-swagger-router-controller: "Task"
-  /pet/{petId}:
+  /task/{taskId}:
     get:
       tags:
       - "task"
@@ -57,6 +79,7 @@ paths:
       operationId: "getTaskById"
       produces:
       - "application/json"
+      - "application/xml"
       parameters:
       - name: "taskId"
         in: "path"
@@ -73,7 +96,6 @@ paths:
           description: "Invalid ID supplied"
         404:
           description: "Task not found"
-      security:
       x-swagger-router-controller: "Task"
     post:
       tags:
@@ -105,7 +127,6 @@ paths:
           description: "successful operation"
         405:
           description: "Invalid input"
-      security:
       x-swagger-router-controller: "Task"
     delete:
       tags:
@@ -128,27 +149,31 @@ paths:
           description: "Invalid ID supplied"
         404:
           description: "Task not found"
-      security:
       x-swagger-router-controller: "Task"
 definitions:
   Task:
     type: "object"
     required:
-    - "name"
-    - "isComp"
+    - "title"
     properties:
       id:
         type: "integer"
         format: "int64"
       isCompleted:
         type: "boolean"
-        default: "false"
+        default: false
       title:
         type: "string"
-        example: "title"
       content:
         type: "string"
-        example: "content"
       deadline:
         type: "integer"
         format: "int64"
+    xml:
+      name: "Task"
+    example:
+      id: 0
+      isCompleted: false
+      title: "title"
+      content: "content"
+      deadline: 0

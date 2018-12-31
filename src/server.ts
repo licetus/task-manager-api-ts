@@ -132,7 +132,9 @@ const server = async(isDev: boolean = false, isTest: boolean = false) => {
       }
       res.status(statusCode).send({ error })
       next()
-     })
+    })
+    
+    apiRouter.use(middleware.swaggerUi())
   })
 
   app.use('/docs', express.static('node_modules/swagger-ui/dist'))

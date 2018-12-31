@@ -26,6 +26,7 @@ securityDefinitions:
     name: "X-Auth-Key"
     in: "header"
 tags:
+- $ref: "task/base.yaml#/tags"
 - $ref: "pet/base.yaml#/tags"
 - $ref: "store/base.yaml#/tags"
 - $ref: "user/base.yaml#/tags"
