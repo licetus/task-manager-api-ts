@@ -11,7 +11,6 @@ import { Manager } from 'task-manager-model-ts'
 
 import config from './config'
 import errors from './errors'
-import controllers from './controllers'
 import { apiKeyAuth } from './authorization'
 
 log4js.configure({
@@ -90,7 +89,7 @@ const server = async(isDev: boolean = false, isTest: boolean = false) => {
     }))
 
     const options = {
-      controllers,
+      controllers: path.join(__dirname, './controllers'),
       useStubs: isDev && !isTest, // Conditionally turn on stubs (mock mode)
       ignoreMissingHandlers: isDev && !isTest,
     }

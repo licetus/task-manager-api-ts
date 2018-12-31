@@ -76,7 +76,7 @@ paths:
       - "task"
       summary: "Find task by ID"
       description: "Returns a single task"
-      operationId: "getTaskById"
+      operationId: "getTask"
       produces:
       - "application/json"
       - "application/xml"

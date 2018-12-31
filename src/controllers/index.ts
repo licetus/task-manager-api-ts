@@ -1,3 +1,1 @@
-const controllers = {}
-
-export default controllers
+export * from '../api/task/controllers'
