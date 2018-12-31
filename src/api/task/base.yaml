@@ -3,6 +3,7 @@ tags:
   description: "Everything about Tasks"
 paths:
   /task:
+    x-swagger-router-controller: "Task"
     post:
       tags:
       - "task"
@@ -25,7 +26,6 @@ paths:
       responses:
         405:
           description: "Invalid input"
-      x-swagger-router-controller: "Task"
     get:
       tags:
       - "task"
@@ -69,8 +69,8 @@ paths:
                   $ref: "#/definitions/Task"
         400:
           description: "Get task list failed"
-      x-swagger-router-controller: "Task"
   /task/{taskId}:
+    x-swagger-router-controller: "Task"
     get:
       tags:
       - "task"
@@ -96,7 +96,6 @@ paths:
           description: "Invalid ID supplied"
         404:
           description: "Task not found"
-      x-swagger-router-controller: "Task"
     post:
       tags:
       - "task"
@@ -127,7 +126,6 @@ paths:
           description: "successful operation"
         405:
           description: "Invalid input"
-      x-swagger-router-controller: "Task"
     delete:
       tags:
       - "task"
@@ -149,7 +147,6 @@ paths:
           description: "Invalid ID supplied"
         404:
           description: "Task not found"
-      x-swagger-router-controller: "Task"
 definitions:
   Task:
     type: "object"

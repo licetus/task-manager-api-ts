@@ -1,5 +1,6 @@
 dist/
 build/
+src/swagger.yaml
 
 # DS_Store
 *.DS_Store
