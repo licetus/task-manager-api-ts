@@ -1,3 +1,7 @@
+/task:
+  $ref: "./task/base.yaml#/paths/~1task"
+/task/{taskId}:
+  $ref: "./task/base.yaml#/paths/~1task~1{taskId}"
 /pet:
   $ref: "./pet/base.yaml#/paths/~1pet"
 /pet/findByStatus:

@@ -1,3 +1,5 @@
+Task:
+  $ref: "./task/base.yaml#/definitions/Task"
 Category:
   $ref: "pet/base.yaml#/definitions/Category"
 Tag:
